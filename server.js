@@ -2,7 +2,7 @@ import 'dotenv/config';
 import schedule from 'node-schedule';
 import fetch from 'node-fetch';
 
-const job = schedule.scheduleJob('*/28 * * * *', async () => {
+const job = schedule.scheduleJob('*/1 * * * *', async () => {
   try {
     const response = await fetch(process.env.REQ_URL);
     if (response.ok) {
